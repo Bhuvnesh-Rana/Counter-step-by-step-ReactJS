@@ -8,7 +8,8 @@ class Counter extends Component{
             <div>
                 Hellooo.
                 <br />
-                <button>click.</button>
+                <button>+1</button>
+                <span className="count">0</span>
             </div>
         );
     }
