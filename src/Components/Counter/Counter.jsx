@@ -12,21 +12,19 @@ class Counter extends Component{
         this.increment = this.increment.bind(this)          //bind mthd with const. 
     }
 
-
     render(){
         return(
-            <div>
-                 Hellooo.   
-                <br />                                     
-                <button onClick={this.increment}>+1</button>     {/*//call local mthd with this.  */}
-                <span className="count">{this.state.counter}</span>
+            <div>                                    
+                <button onClick={this.increment} style={{borderRadius:"20px"}}>+{this.props.by}</button>     {/*//call local mthd with this.  */}
+                <span className="count" >{this.state.counter}</span>
             </div>
         );
     }
+
     increment(){
         console.log('increment')
         this.setState({                     //set the state in the mthd. 
-            counter : this.state.counter + 1
+            counter : this.state.counter + this.props.by
         })
     }
 }
