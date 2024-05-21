@@ -8,10 +8,13 @@ class Counter extends Component{
             <div>
                 Hellooo.
                 <br />
-                <button>+1</button>
+                <button onClick={this.increment}>+1</button>
                 <span className="count">0</span>
             </div>
         );
+    }
+    increment(){
+        console.log('increment')
     }
 }
 export default Counter
